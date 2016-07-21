@@ -92,5 +92,14 @@
     
     setInterval(function() {updateID();}, 10*1000);
 
+    setInterval(function() {
+        var posting = $.post('is_registred', {cookie: document.cookie });
+        posting.done(function(data) {
+            if (data === '1') alert("TODO OK");
+            else alert("TODO MAL");
+        });
+    }, 1*1000);
+
+    
     jq(init);
 }());
