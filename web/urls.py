@@ -13,4 +13,8 @@ urlpatterns = [
     url(r'^linked$', views.linked, name='linked'),
     # ex: /new_token/
     url(r'^new_token$', views.new_token, name='new_token'),
+    # ex: /registry_token/
+    url(r'^registry_token', views.registry_token, name='registry_token'),
+    # ex: /is_registred/
+    url(r'^is_registred', views.is_registred, name='is_registred'),
 ]
