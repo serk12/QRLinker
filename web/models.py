@@ -5,3 +5,6 @@ class Sesion(models.Model):
 
     def __str__(self):
         return self.token
+
+class Document(models.Model):
+    docfile = models.FileField(upload_to='documents/')

@@ -2,6 +2,13 @@ from django.shortcuts import render
 from django.http import HttpResponse
 from django.views.decorators.csrf import csrf_exempt
 from web.models import Sesion
+from django.shortcuts import render_to_response
+from django.template import RequestContext
+from django.http import HttpResponseRedirect
+from django.core.urlresolvers import reverse
+
+from web.models import Document
+from web.forms import DocumentForm
 
 import hashlib
 import time
@@ -43,4 +50,20 @@ def is_registred(request):
         return HttpResponse("0")
 
     return HttpResponse("1")
+
+
+@csrf_exempt
+def uploadFile(request):
+    # Handle file upload
+    if request.method == 'POST':
+        form = DocumentForm(request.POST, request.FILES)
+        if form.is_valid():
+            newdoc = Document(docfile = request.FILES['docfile'])
+            newdoc.save()
+
+            # Redirect to the document list after POST
+            return HttpResponse("1")
+    else:
+        form = DocumentForm() # A empty, unbound form
+        return HttpResponse("0")
 

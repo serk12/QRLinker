@@ -17,4 +17,7 @@ urlpatterns = [
     url(r'^registry_token', views.registry_token, name='registry_token'),
     # ex: /is_registred/
     url(r'^is_registred', views.is_registred, name='is_registred'),
+    # ex: /uploadFile/
+    url(r'^uploadFile', views.uploadFile, name='uploadFile'),
+
 ]
