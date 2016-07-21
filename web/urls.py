@@ -10,7 +10,7 @@ urlpatterns = [
     # ex: /cam/
     url(r'^cam$', views.cam, name='cam'),
     # ex: /linked/
-    url(r'^linked$', views.lnked, name='linked'),
+    url(r'^linked$', views.linked, name='linked'),
     # ex: /new_token/
     url(r'^new_token$', views.new_token, name='new_token'),
 ]
