@@ -29,7 +29,7 @@
             background: jq('#background').val(),
             // fill: jq('#img-buffer')[0],
 
-            text: getPass(),
+            text: document.cookie,
             size: parseInt(400, 10),
             radius: parseInt(jq('#radius').val(), 10) * 0.01,
             quiet: parseInt(jq('#quiet').val(), 10),
@@ -81,7 +81,16 @@
     }
     
     //funcion to server get getPass
-    function getPass() { return "RALUCA TONTA :P";}
+    function updateID() { 
+        var posting = $.post('new_token');
+        posting.done(function(data) {
+            alert(data);
+            document.cookie = data; 
+        });
+        
+    }
+    
+    setInterval(function() {updateID()}, 1000);
 
     jq(init);
 }());
