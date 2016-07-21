@@ -11,6 +11,8 @@
         ['mposx', '%'],
         ['mposy', '%']
     ];
+    
+    updateID();
 
     function updateGui() {
         jq.each(guiValuePairs, function (idx, pair) {
@@ -93,7 +95,6 @@
     setInterval(function() {updateID();}, 10*1000);
 
     setInterval(function() {
-        
         var posting = $.post('is_registred');
         posting.done(function(data) {
             if (data === '1') location.replace('./linked');
