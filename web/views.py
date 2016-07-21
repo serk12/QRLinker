@@ -36,6 +36,11 @@ def registry_token(request):
 
 @csrf_exempt
 def is_registred(request):
-    tk = request.COOKIES["cookie"]
+    try:
+        tk = request.COOKIES["cookie"]
+        Sesion.objects.get(token=tk)
+    except:
+        return HttpResponse("0")
+
     return HttpResponse("1")
 
