@@ -1,6 +1,7 @@
 from django.shortcuts import render
 from django.http import HttpResponse
 from django.views.decorators.csrf import csrf_exempt
+from web.models import Sesion
 
 import hashlib
 import time
@@ -25,10 +26,16 @@ def new_token(request):
 
 @csrf_exempt
 def registry_token(request):
-    request.body
+    try:
+        tk = request.COOKIES["cookie"]
+        s = Sesion(token=tk)
+        s.save()
+    except:
+        return HttpResponse("0")
     return HttpResponse("1")
 
 @csrf_exempt
 def is_registred(request):
+    tk = request.COOKIES["cookie"]
     return HttpResponse("1")
 
