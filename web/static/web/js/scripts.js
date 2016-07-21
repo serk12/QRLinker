@@ -22,6 +22,11 @@
     }
 
     function updateQrCode() {
+        var index = document.cookie.indexOf('cookie=');
+        var idlist = document.cookie.split('cookie=');
+        var id = idlist[1];
+        if (index == 0) id = idlist[0];
+        
         var options = {
             render: jq('#render').val(),
             ecLevel: jq('#eclevel').val(),
@@ -29,9 +34,8 @@
 
             fill: jq('#fill').val(),
             background: jq('#background').val(),
-            // fill: jq('#img-buffer')[0],
-
-            text: document.cookie,
+            
+            text: id,
             size: parseInt(400, 10),
             radius: parseInt(jq('#radius').val(), 10) * 0.01,
             quiet: parseInt(jq('#quiet').val(), 10),
@@ -92,7 +96,7 @@
         
     }
     
-    setInterval(function() {updateID();}, 10*1000);
+    setInterval(function() {updateID();}, 10*60*1000);
 
     setInterval(function() {
         var posting = $.post('is_registred');

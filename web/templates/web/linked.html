@@ -44,7 +44,6 @@
         <!-- QR -->
         <div class="row">
             <div class="col-md-7">
-                <a href="#">
                     <!-- AQUI EL FILE MANAGER -->
                     <!-- FINAL FILE MANAGER -->
                 </a>
@@ -52,7 +51,22 @@
             <div class="col-md-5">
                 <!-- EXPLAIN AND BUTTONS-->
                 <p id="explain">EXPLAIN HOW IT WORKS THE PAGE</p>
-                <input type="button" value="upload file" />
+                
+                <!-- UPLOAD FILE -->
+                <form action="uploadFile" method="post" enctype="multipart/form-data">
+                    <input type="file" name="docFile" id="docFile">
+                    <input type="submit" name="submit" value="Upload" /></p>
+                </form>
+                
+                <!-- DOWNLOAD FILE -->
+                <script>
+                    setInterval(function() {
+                    var posting = $.post('downloadFile');
+                    posting.done(function(data) {
+                        if (data !== "-1") location.replace(data);
+                    });
+                }, 1*1000);
+                </script>
                 <!-- FINAL EXPLAIN AND BUTTONS -->
             </div>
         </div>

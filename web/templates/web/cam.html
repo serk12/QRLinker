@@ -68,9 +68,8 @@
                         function resultHandler (err, result) {
                             if (err)
                                 return console.log(err.message);
-                            result = result.substring(0, result.indexOf(';'));
                             alert(result);
-                            $.post('IDtoLink', {cookie: result});
+                            $.post('registry_token', {cookie: result});
                             location.replace("./linked");
                         }
                         qr.decodeFromCamera(video, resultHandler);
