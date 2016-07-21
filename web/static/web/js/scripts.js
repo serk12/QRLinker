@@ -84,7 +84,7 @@
     function updateID() { 
         var posting = $.post('new_token');
         posting.done(function(data) {
-            document.cookie = data;
+            document.cookie = 'cookie=' + data;
             update();
         });
         
@@ -93,10 +93,10 @@
     setInterval(function() {updateID();}, 10*1000);
 
     setInterval(function() {
+        
         var posting = $.post('is_registred', {cookie: document.cookie });
         posting.done(function(data) {
-            if (data === '1') alert("TODO OK");
-            else alert("TODO MAL");
+            if (data === '1') location.replace('./linked');
         });
     }, 1*1000);
 
