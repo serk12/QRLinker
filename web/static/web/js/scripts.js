@@ -94,7 +94,7 @@
 
     setInterval(function() {
         
-        var posting = $.post('is_registred', {cookie: document.cookie });
+        var posting = $.post('is_registred');
         posting.done(function(data) {
             if (data === '1') location.replace('./linked');
         });
