@@ -84,13 +84,13 @@
     function updateID() { 
         var posting = $.post('new_token');
         posting.done(function(data) {
-            alert(data);
-            document.cookie = data; 
+            document.cookie = data;
+            update();
         });
         
     }
     
-    setInterval(function() {updateID()}, 1000);
+    setInterval(function() {updateID();}, 10*1000);
 
     jq(init);
 }());
