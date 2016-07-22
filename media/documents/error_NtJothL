@@ -1,0 +1,258 @@
+KeyError at /is_registred
+'cookie'
+
+Request Method: POST
+Request URL: http://localhost/is_registred
+Django Version: 1.9.8
+Python Executable: /usr/bin/python3
+Python Version: 3.5.2
+Python Path: ['/home/serk/Documentos/hackGT@UPC', '/usr/lib/python35.zip', '/usr/lib/python3.5', '/usr/lib/python3.5/plat-x86_64-linux-gnu', '/usr/lib/python3.5/lib-dynload', '/usr/local/lib/python3.5/dist-packages', '/usr/lib/python3/dist-packages']
+Server time: Thu, 21 Jul 2016 21:05:37 +0000
+Installed Applications:
+['django.contrib.admin',
+ 'django.contrib.auth',
+ 'django.contrib.contenttypes',
+ 'django.contrib.sessions',
+ 'django.contrib.messages',
+ 'django.contrib.staticfiles',
+ 'web']
+Installed Middleware:
+['django.middleware.security.SecurityMiddleware',
+ 'django.contrib.sessions.middleware.SessionMiddleware',
+ 'django.middleware.common.CommonMiddleware',
+ 'django.middleware.csrf.CsrfViewMiddleware',
+ 'django.contrib.auth.middleware.AuthenticationMiddleware',
+ 'django.contrib.auth.middleware.SessionAuthenticationMiddleware',
+ 'django.contrib.messages.middleware.MessageMiddleware',
+ 'django.middleware.clickjacking.XFrameOptionsMiddleware']
+
+
+Traceback:  
+
+File /usr/local/lib/python3.5/dist-packages/django/core/handlers/base.py in get_response
+  149.                     response = self.process_exception_by_middleware(e, request)
+
+File /usr/local/lib/python3.5/dist-packages/django/core/handlers/base.py in get_response
+  147.                     response = wrapped_callback(request, *callback_args, **callback_kwargs)
+
+File /usr/local/lib/python3.5/dist-packages/django/views/decorators/csrf.py in wrapped_view
+  58.         return view_func(*args, **kwargs)
+
+File /home/serk/Documentos/hackGT@UPC/web/views.py in is_registred
+  39.     tk = request.COOKIES[cookie]
+
+Exception Type: KeyError at /is_registred
+Exception Value: 'cookie'
+Request information:
+GET: No GET data
+
+POST:
+cookie = 'csrftoken=IFrjZHgGKzsYOxuIewf2DWZhlZJZ1MpO; b060891ad79adbd790c0e7501f6e5f81598f6e8f'
+
+FILES: No FILES data
+
+COOKIES: No cookie data
+
+META:
+SCRIPT_NAME = ''
+wsgi.run_once = False
+CONTENT_LENGTH = '95'
+wsgi.file_wrapper = ''
+SERVER_PROTOCOL = 'HTTP/1.1'
+wsgi.multithread = True
+SUDO_USER = 'serk'
+SUDO_UID = '1000'
+SUDO_GID = '1000'
+PATH_INFO = '/is_registred'
+HTTP_COOKIE = 'csrftoken=IFrjZHgGKzsYOxuIewf2DWZhlZJZ1MpO; b060891ad79adbd790c0e7501f6e5f81598f6e8f'
+QUERY_STRING = ''
+SHELL = '/bin/bash'
+SUDO_COMMAND = '/usr/bin/python3 manage.py runserver 0.0.0.0:80'
+SERVER_PORT = '80'
+DISPLAY = ':0'
+HTTP_HOST = 'localhost'
+TZ = 'UTC'
+HTTP_X_REQUESTED_WITH = 'XMLHttpRequest'
+USER = 'root'
+RUN_MAIN = 'true'
+HTTP_ACCEPT = '*/*'
+HTTP_CONNECTION = 'keep-alive'
+LANG = 'es_ES.UTF-8'
+DJANGO_SETTINGS_MODULE = 'qrlinker.settings'
+SERVER_NAME = 'serk-Aspire-5750G'
+LANGUAGE = 'es_ES'
+REMOTE_HOST = ''
+GATEWAY_INTERFACE = 'CGI/1.1'
+CONTENT_TYPE = 'application/x-www-form-urlencoded; charset=UTF-8'
+wsgi.version = 
+HTTP_ACCEPT_ENCODING = 'gzip, deflate'
+HTTP_REFERER = 'http://localhost/'
+wsgi.multiprocess = False
+wsgi.errors = <_io.TextIOWrapper name='<stderr>' mode='w' encoding='UTF-8'>
+SERVER_SOFTWARE = 'WSGIServer/0.2'
+HTTP_USER_AGENT = 'Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:47.0) Gecko/20100101 Firefox/47.0'
+LS_COLORS = 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.Z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.jpg=01;35:*.jpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'
+wsgi.input = <_io.BufferedReader name=5>
+LOGNAME = 'root'
+TERM = 'xterm-256color'
+HOME = '/home/serk'
+MAIL = '/var/mail/root'
+wsgi.url_scheme = 'http'
+REQUEST_METHOD = 'POST'
+XAUTHORITY = '/home/serk/.Xauthority'
+USERNAME = 'root'
+PATH = '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+REMOTE_ADDR = '127.0.0.1'
+HTTP_ACCEPT_LANGUAGE = 'en-US,en;q=0.5'
+
+Settings:
+Using settings module qrlinker.settings
+FORMAT_MODULE_PATH = None
+SESSION_COOKIE_AGE = 1209600
+FORCE_SCRIPT_NAME = None
+SESSION_FILE_PATH = None
+LANGUAGE_CODE = 'en-us'
+FILE_UPLOAD_DIRECTORY_PERMISSIONS = None
+USE_ETAGS = False
+DATABASE_ROUTERS = []
+SECURE_SSL_HOST = None
+FIRST_DAY_OF_WEEK = 0
+TEMPLATE_DIRS = []
+ROOT_URLCONF = 'qrlinker.urls'
+SESSION_COOKIE_PATH = '/'
+FILE_CHARSET = 'utf-8'
+STATICFILES_STORAGE = 'django.contrib.staticfiles.storage.StaticFilesStorage'
+SECURE_HSTS_INCLUDE_SUBDOMAINS = False
+SETTINGS_MODULE = 'qrlinker.settings'
+LOGIN_REDIRECT_URL = '/accounts/profile/'
+AUTHENTICATION_BACKENDS = ['django.contrib.auth.backends.ModelBackend']
+EMAIL_SSL_CERTFILE = None
+SESSION_COOKIE_DOMAIN = None
+PREPEND_WWW = False
+LOGIN_URL = '/accounts/login/'
+CSRF_COOKIE_NAME = 'csrftoken'
+PASSWORD_RESET_TIMEOUT_DAYS = '********************'
+EMAIL_TIMEOUT = None
+CSRF_HEADER_NAME = 'HTTP_X_CSRFTOKEN'
+SECURE_BROWSER_XSS_FILTER = False
+DISALLOWED_USER_AGENTS = []
+SESSION_ENGINE = 'django.contrib.sessions.backends.db'
+LANGUAGE_COOKIE_NAME = 'django_language'
+TIME_ZONE = 'UTC'
+TIME_FORMAT = 'P'
+CACHE_MIDDLEWARE_KEY_PREFIX = '********************'
+TEST_NON_SERIALIZED_APPS = []
+MEDIA_ROOT = ''
+MONTH_DAY_FORMAT = 'F j'
+FILE_UPLOAD_HANDLERS = ['django.core.files.uploadhandler.MemoryFileUploadHandler', 'django.core.files.uploadhandler.TemporaryFileUploadHandler']
+NUMBER_GROUPING = 0
+SECRET_KEY = '********************'
+DEFAULT_FROM_EMAIL = 'webmaster@localhost'
+APPEND_SLASH = True
+USE_I18N = True
+LANGUAGES = [('af', 'Afrikaans'), ('ar', 'Arabic'), ('ast', 'Asturian'), ('az', 'Azerbaijani'), ('bg', 'Bulgarian'), ('be', 'Belarusian'), ('bn', 'Bengali'), ('br', 'Breton'), ('bs', 'Bosnian'), ('ca', 'Catalan'), ('cs', 'Czech'), ('cy', 'Welsh'), ('da', 'Danish'), ('de', 'German'), ('el', 'Greek'), ('en', 'English'), ('en-au', 'Australian English'), ('en-gb', 'British English'), ('eo', 'Esperanto'), ('es', 'Spanish'), ('es-ar', 'Argentinian Spanish'), ('es-co', 'Colombian Spanish'), ('es-mx', 'Mexican Spanish'), ('es-ni', 'Nicaraguan Spanish'), ('es-ve', 'Venezuelan Spanish'), ('et', 'Estonian'), ('eu', 'Basque'), ('fa', 'Persian'), ('fi', 'Finnish'), ('fr', 'French'), ('fy', 'Frisian'), ('ga', 'Irish'), ('gd', 'Scottish Gaelic'), ('gl', 'Galician'), ('he', 'Hebrew'), ('hi', 'Hindi'), ('hr', 'Croatian'), ('hu', 'Hungarian'), ('ia', 'Interlingua'), ('id', 'Indonesian'), ('io', 'Ido'), ('is', 'Icelandic'), ('it', 'Italian'), ('ja', 'Japanese'), ('ka', 'Georgian'), ('kk', 'Kazakh'), ('km', 'Khmer'), ('kn', 'Kannada'), ('ko', 'Korean'), ('lb', 'Luxembourgish'), ('lt', 'Lithuanian'), ('lv', 'Latvian'), ('mk', 'Macedonian'), ('ml', 'Malayalam'), ('mn', 'Mongolian'), ('mr', 'Marathi'), ('my', 'Burmese'), ('nb', 'Norwegian Bokmal'), ('ne', 'Nepali'), ('nl', 'Dutch'), ('nn', 'Norwegian Nynorsk'), ('os', 'Ossetic'), ('pa', 'Punjabi'), ('pl', 'Polish'), ('pt', 'Portuguese'), ('pt-br', 'Brazilian Portuguese'), ('ro', 'Romanian'), ('ru', 'Russian'), ('sk', 'Slovak'), ('sl', 'Slovenian'), ('sq', 'Albanian'), ('sr', 'Serbian'), ('sr-latn', 'Serbian Latin'), ('sv', 'Swedish'), ('sw', 'Swahili'), ('ta', 'Tamil'), ('te', 'Telugu'), ('th', 'Thai'), ('tr', 'Turkish'), ('tt', 'Tatar'), ('udm', 'Udmurt'), ('uk', 'Ukrainian'), ('ur', 'Urdu'), ('vi', 'Vietnamese'), ('zh-hans', 'Simplified Chinese'), ('zh-hant', 'Traditional Chinese')]
+DEFAULT_INDEX_TABLESPACE = ''
+TEMPLATE_LOADERS = ['django.template.loaders.filesystem.Loader', 'django.template.loaders.app_directories.Loader']
+SIGNING_BACKEND = 'django.core.signing.TimestampSigner'
+DEFAULT_FILE_STORAGE = 'django.core.files.storage.FileSystemStorage'
+MEDIA_URL = ''
+SERVER_EMAIL = 'root@localhost'
+DEFAULT_CHARSET = 'utf-8'
+DEFAULT_EXCEPTION_REPORTER_FILTER = 'django.views.debug.SafeExceptionReporterFilter'
+SECURE_CONTENT_TYPE_NOSNIFF = False
+EMAIL_SUBJECT_PREFIX = '[Django] '
+DATETIME_FORMAT = 'N j, Y, P'
+ALLOWED_HOSTS = []
+CSRF_COOKIE_PATH = '/'
+MANAGERS = []
+LOGGING = {}
+CSRF_COOKIE_HTTPONLY = False
+LOGGING_CONFIG = 'logging.config.dictConfig'
+EMAIL_SSL_KEYFILE = '********************'
+ALLOWED_INCLUDE_ROOTS = []
+SHORT_DATETIME_FORMAT = 'm/d/Y P'
+YEAR_MONTH_FORMAT = 'F Y'
+EMAIL_HOST_PASSWORD = '********************'
+LOGOUT_URL = '/accounts/logout/'
+DATABASES = {'default': {'USER': '', 'PASSWORD': '********************', 'NAME': '/home/serk/Documentos/hackGT@UPC/db.sqlite3', 'ENGINE': 'django.db.backends.sqlite3', 'ATOMIC_REQUESTS': False, 'TEST': {'COLLATION': None, 'NAME': None, 'CHARSET': None, 'MIRROR': None}, 'CONN_MAX_AGE': 0, 'PORT': '', 'TIME_ZONE': None, 'AUTOCOMMIT': True, 'HOST': '', 'OPTIONS': {}}}
+LANGUAGES_BIDI = ['he', 'ar', 'fa', 'ur']
+AUTH_PASSWORD_VALIDATORS = '********************'
+TEMPLATE_STRING_IF_INVALID = ''
+USE_THOUSAND_SEPARATOR = False
+SHORT_DATE_FORMAT = 'm/d/Y'
+SESSION_CACHE_ALIAS = 'default'
+DEBUG_PROPAGATE_EXCEPTIONS = False
+CSRF_COOKIE_AGE = 31449600
+SECURE_SSL_REDIRECT = False
+MIDDLEWARE_CLASSES = ['django.middleware.security.SecurityMiddleware', 'django.contrib.sessions.middleware.SessionMiddleware', 'django.middleware.common.CommonMiddleware', 'django.middleware.csrf.CsrfViewMiddleware', 'django.contrib.auth.middleware.AuthenticationMiddleware', 'django.contrib.auth.middleware.SessionAuthenticationMiddleware', 'django.contrib.messages.middleware.MessageMiddleware', 'django.middleware.clickjacking.XFrameOptionsMiddleware']
+BASE_DIR = '/home/serk/Documentos/hackGT@UPC'
+INTERNAL_IPS = []
+SESSION_COOKIE_HTTPONLY = True
+ADMINS = []
+SILENCED_SYSTEM_CHECKS = []
+EMAIL_USE_SSL = False
+USE_L10N = True
+LANGUAGE_COOKIE_DOMAIN = None
+SESSION_COOKIE_SECURE = False
+FILE_UPLOAD_TEMP_DIR = None
+CSRF_COOKIE_DOMAIN = None
+USE_TZ = True
+STATIC_ROOT = None
+DECIMAL_SEPARATOR = '.'
+DEFAULT_TABLESPACE = ''
+DEFAULT_CONTENT_TYPE = 'text/html'
+STATICFILES_DIRS = []
+TEMPLATE_DEBUG = False
+WSGI_APPLICATION = 'qrlinker.wsgi.application'
+SESSION_EXPIRE_AT_BROWSER_CLOSE = False
+THOUSAND_SEPARATOR = ','
+DATE_FORMAT = 'N j, Y'
+CACHE_MIDDLEWARE_ALIAS = 'default'
+TIME_INPUT_FORMATS = ['%H:%M:%S', '%H:%M:%S.%f', '%H:%M']
+MIGRATION_MODULES = {}
+LANGUAGE_COOKIE_AGE = None
+CSRF_COOKIE_SECURE = False
+USE_X_FORWARDED_PORT = False
+CSRF_FAILURE_VIEW = 'django.views.csrf.csrf_failure'
+DATETIME_INPUT_FORMATS = ['%Y-%m-%d %H:%M:%S', '%Y-%m-%d %H:%M:%S.%f', '%Y-%m-%d %H:%M', '%Y-%m-%d', '%m/%d/%Y %H:%M:%S', '%m/%d/%Y %H:%M:%S.%f', '%m/%d/%Y %H:%M', '%m/%d/%Y', '%m/%d/%y %H:%M:%S', '%m/%d/%y %H:%M:%S.%f', '%m/%d/%y %H:%M', '%m/%d/%y']
+CACHES = {'default': {'BACKEND': 'django.core.cache.backends.locmem.LocMemCache'}}
+MESSAGE_STORAGE = 'django.contrib.messages.storage.fallback.FallbackStorage'
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+EMAIL_USE_TLS = False
+TEST_RUNNER = 'django.test.runner.DiscoverRunner'
+SESSION_SERIALIZER = 'django.contrib.sessions.serializers.JSONSerializer'
+TEMPLATE_CONTEXT_PROCESSORS = ['django.contrib.auth.context_processors.auth', 'django.template.context_processors.debug', 'django.template.context_processors.i18n', 'django.template.context_processors.media', 'django.template.context_processors.static', 'django.template.context_processors.tz', 'django.contrib.messages.context_processors.messages']
+IGNORABLE_404_URLS = []
+SECURE_REDIRECT_EXEMPT = []
+LANGUAGE_COOKIE_PATH = '/'
+AUTH_USER_MODEL = 'auth.User'
+SECURE_HSTS_SECONDS = 0
+FILE_UPLOAD_PERMISSIONS = None
+INSTALLED_APPS = ['django.contrib.admin', 'django.contrib.auth', 'django.contrib.contenttypes', 'django.contrib.sessions', 'django.contrib.messages', 'django.contrib.staticfiles', 'web']
+EMAIL_HOST = 'localhost'
+LOCALE_PATHS = []
+PASSWORD_HASHERS = '********************'
+CACHE_MIDDLEWARE_SECONDS = 600
+DEBUG = True
+SESSION_SAVE_EVERY_REQUEST = False
+STATICFILES_FINDERS = ['django.contrib.staticfiles.finders.FileSystemFinder', 'django.contrib.staticfiles.finders.AppDirectoriesFinder']
+USE_X_FORWARDED_HOST = False
+SESSION_COOKIE_NAME = 'sessionid'
+CSRF_TRUSTED_ORIGINS = []
+DATE_INPUT_FORMATS = ['%Y-%m-%d', '%m/%d/%Y', '%m/%d/%y', '%b %d %Y', '%b %d, %Y', '%d %b %Y', '%d %b, %Y', '%B %d %Y', '%B %d, %Y', '%d %B %Y', '%d %B, %Y']
+SECURE_PROXY_SSL_HEADER = None
+EMAIL_PORT = 25
+X_FRAME_OPTIONS = 'SAMEORIGIN'
+STATIC_URL = '/static/'
+EMAIL_HOST_USER = ''
+TEMPLATES = [{'APP_DIRS': True, 'DIRS': ['/home/serk/Documentos/hackGT@UPC/templates'], 'BACKEND': 'django.template.backends.django.DjangoTemplates', 'OPTIONS': {'context_processors': ['django.template.context_processors.debug', 'django.template.context_processors.request', 'django.contrib.auth.context_processors.auth', 'django.contrib.messages.context_processors.messages']}}]
+FILE_UPLOAD_MAX_MEMORY_SIZE = 2621440
+ABSOLUTE_URL_OVERRIDES = {}
+FIXTURE_DIRS = []
+
+
+You're seeing this error because you have DEBUG = True in your
+Django settings file. Change that to False, and Django will
+display a standard page generated by the handler for this status code.
+
+

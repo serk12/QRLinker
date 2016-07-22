@@ -5,7 +5,7 @@
 
 <head>
     <title>QRLinker</title>
-
+    <link rel="icon" href="{% static "web/fonts/icon.png" %}">
     <!-- Bootstrap Core CSS -->
     <link href="{% static "web/css/bootstrap.min.css" %}" rel="stylesheet">
 
@@ -29,7 +29,7 @@
                         <a onclick="changeExplain()">About</a>
                         <script>
                         function changeExplain() {
-                            document.getElementById("explain").innerHTML = "A LOT OF THINGS";
+                            document.getElementById("explain").innerHTML = "This web side has been done in HackGT@UPC 2016 \n thanks to: \n     Circosta for https://github.com/cirocosta/qcode-decoder\n     startbootstrap for http://startbootstrap.com/template-overviews/1-col-portfolio/\n     Irsjng for https://larsjung.de/jquery-qrcode/";
                         }
                         </script>
                     </li>
@@ -53,7 +53,7 @@
             </div>
             <div class="col-md-5">
                 <!-- EXPLAIN AND BUTTONS-->
-                <p id="explain">EXPLAIN HOW IT WORKS THE PAGE</p>
+                <p id="explain">You can link 2 browsers. The first one whit the QR and the second click in "Cam" and scan the file. Next upload the file from one browser and the second will download</p>
                 <input type="button" onclick="location.href='{% url 'web:cam' %}';" value="Cam" />
                 <!-- FINAL EXPLAIN AND BUTTONS -->
             </div>

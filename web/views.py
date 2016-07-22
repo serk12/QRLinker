@@ -75,6 +75,6 @@ def downloadFile(request):
     try:
         tk = request.COOKIES["cookie"]
         doc = Document.objects.get(token=tk)
-        return HttpResponse(doc.docfile)
+        return HttpResponse(doc.docfile._get_url())
     except:
         return HttpResponse("-1")
