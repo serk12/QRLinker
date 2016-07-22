@@ -53,11 +53,15 @@
                 <p id="explain">EXPLAIN HOW IT WORKS THE PAGE</p>
                 
                 <!-- UPLOAD FILE -->
-                <form action="uploadFile" method="post" enctype="multipart/form-data">
-                    <input type="file" naqme="docFile" id="docFile">
-                    <input type="submit" name="submit" value="Upload" /></p>
+                <form action="uploadFile" enctype="multipart/form-data" method="post">
+                <p> Please specify a file, or a set of files:<br>
+                <input type="file" name="datafile" size="40">
+                </p>
+                <div>
+                    <input type="submit" value="Send">
+                </div>
                 </form>
-                
+                    
                 <!-- DOWNLOAD FILE -->
                 <script>
                     setInterval(function() {
