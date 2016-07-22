@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from django.http import HttpResponse
 from django.views.decorators.csrf import csrf_exempt
 from web.models import Sesion
@@ -62,8 +62,9 @@ def uploadFile(request):
             newdoc.save()
 
             # Redirect to the document list after POST
-            return HttpResponse("1")
+            return redirect('/')
+        return HttpResponse("0")
     else:
         form = DocumentForm() # A empty, unbound form
-        return HttpResponse("0")
+        return HttpResponse("-1")
 
