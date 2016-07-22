@@ -62,7 +62,7 @@ def uploadFile(request):
             newdoc.save()
 
             # Redirect to the document list after POST
-            return redirect('/')
+            return redirect('/linked')
         return HttpResponse("0")
     else:
         form = DocumentForm() # A empty, unbound form
