@@ -19,5 +19,7 @@ urlpatterns = [
     url(r'^is_registred', views.is_registred, name='is_registred'),
     # ex: /uploadFile/
     url(r'^uploadFile', views.uploadFile, name='uploadFile'),
+    # ex: /downloadFile/
+    url(r'^downloadFile', views.downloadFile, name='downloadFile'),
 
 ]

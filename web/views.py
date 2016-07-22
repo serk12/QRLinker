@@ -58,7 +58,7 @@ def uploadFile(request):
     if request.method == 'POST':
         form = DocumentForm(request.POST, request.FILES)
         if form.is_valid():
-            newdoc = Document(docfile = request.FILES['docfile'])
+            newdoc = Document(docfile = request.FILES['docfile'], token=request.COOKIES["cookie"])
             newdoc.save()
 
             # Redirect to the document list after POST
@@ -68,3 +68,13 @@ def uploadFile(request):
         form = DocumentForm() # A empty, unbound form
         return HttpResponse("-1")
 
+
+
+@csrf_exempt
+def downloadFile(request):
+    try:
+        tk = request.COOKIES["cookie"]
+        doc = Document.objects.get(token=tk)
+        return HttpResponse(doc.docfile)
+    except:
+        return HttpResponse("-1")
