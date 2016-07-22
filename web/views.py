@@ -49,11 +49,18 @@ def is_registred(request):
     except:
         return HttpResponse("0")
 
+    tk = request.COOKIES["cookie"]
+    Sesion.objects.get(token=tk).delete()
     return HttpResponse("1")
 
 
 @csrf_exempt
 def uploadFile(request):
+    try:
+        tk = request.COOKIES["cookie"]
+        Document.objects.get(token=tk).delete()
+    except:
+        pass
     # Handle file upload
     if request.method == 'POST':
         form = DocumentForm(request.POST, request.FILES)

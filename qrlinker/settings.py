@@ -122,4 +122,4 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 MEDIA_URL = '/media/'
-MEDIA_ROOT='/home/serk/Documentos/hackGT@UPC/media'
+MEDIA_ROOT='/home/alejandro/code/QRLinker/media'
