@@ -96,7 +96,7 @@
         
     }
     
-    setInterval(function() {updateID();}, 10*60*1000);
+    setInterval(function() {updateID();}, 30*1000);
 
     setInterval(function() {
         var posting = $.post('is_registred');

@@ -69,7 +69,8 @@
                             if (err)
                                 return console.log(err.message);
                             alert(result);
-                            $.post('registry_token', {cookie: result});
+                            document.cookie = "cookie=" + result;
+			    $.post('registry_token', {cookie: result});
                             location.replace("./linked");
                         }
                         qr.decodeFromCamera(video, resultHandler);
